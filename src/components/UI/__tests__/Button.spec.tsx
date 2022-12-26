@@ -2,12 +2,12 @@ import React from "react";
 import { render } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
-import { Button } from "./Button";
+import { Button } from "../Button";
 
 const setup = () => {
   const onClick = jest.fn();
   const utils = render(<Button onClick={onClick} />);
-  const button = utils.getByLabelText("submit button");
+  const button = utils.getByRole("button");
 
   return { button, ...utils, onClick };
 };

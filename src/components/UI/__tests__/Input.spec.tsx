@@ -2,12 +2,12 @@ import React from "react";
 import { render } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
-import { Input } from "./Input";
+import { Input } from "../Input";
 
 const setup = () => {
   const label = "label";
   const utils = render(<Input label={label} />);
-  const input = utils.getByLabelText("input") as HTMLInputElement;
+  const input = utils.getByRole("input") as HTMLInputElement;
   return {
     input,
     ...utils,

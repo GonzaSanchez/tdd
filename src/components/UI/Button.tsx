@@ -5,7 +5,7 @@ interface ButtonProps {
 }
 
 export const Button = ({ onClick }: ButtonProps) => (
-  <button type="submit" aria-label="submit button" onClick={onClick}>
+  <button type="submit" role="button" onClick={onClick}>
     click me
   </button>
 );
